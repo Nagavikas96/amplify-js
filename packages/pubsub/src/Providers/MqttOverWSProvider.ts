@@ -294,7 +294,7 @@ export class MqttOverWSProvider extends AbstractPubSubProvider<MqttProviderOptio
 					matchedTopicObservers.push(observerForTopic);
 				}
 			});
-			const parsedMessage: PubSubContent = JSON.parse(msg);
+			const parsedMessage: PubSubContent = msg;
 
 			if (typeof parsedMessage === 'object') {
 				// @ts-ignore
